@@ -40,26 +40,26 @@
 </head>
 <body>
   <a id="bg" onclick="return false" href="javascript:(function () {
-  if (document.getElementById('BackgroundGeneratorBookmarklet')) {
-   var elem = document.getElementById('BackgroundGeneratorBookmarklet');
-   if (elem.style.display === 'block') {
-    elem.style.display = 'none';
-   } else {
-    elem.style.display = 'block';
-   }
-  } else {
-   var div = document.createElement('div');
-   div.id = 'BackgroundGeneratorBookmarklet';
-   div.style.display = 'block';
-   document.body.appendChild(div);
-   var css = document.createElement('link');
-   css.href = 'https://raw.github.com/lgick/BackGenerator/master/style.css';
-   css.rel = 'stylesheet';
-   document.getElementsByTagName('head')[0].appendChild(css);
-   var script = document.createElement('script');
-   script.src = 'https://raw.github.com/lgick/BackGenerator/master/script.js';
-   document.body.appendChild(script);
-  }
+    if (document.getElementById('BackgroundGeneratorBookmarklet')) {
+      var elem = document.getElementById('BackgroundGeneratorBookmarklet');
+      if (elem.style.top === '0px') {
+        elem.style.top = '-125px';
+      } else {
+        elem.style.top = '0px';
+      }
+    } else {
+      var css = document.createElement('link');
+      css.href = 'http://localhost/bg/style.css';
+      css.rel = 'stylesheet';
+      document.getElementsByTagName('head')[0].appendChild(css);
+      var script = document.createElement('script');
+      script.src = 'http://localhost/bg/script.js';
+      document.body.appendChild(script);
+      var div = document.createElement('div');
+      div.id = 'BackgroundGeneratorBookmarklet';
+      document.body.appendChild(div);
+      div.style.top = '0px';
+    }
   }());">back generator</a>
 </body>
 </html>
