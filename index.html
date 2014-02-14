@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Background Generator - приложение для быстрого подбора фона для вашего сайта</title>
+  <style type="text/css">
+    * {
+     padding: 0;
+     margin: 0;
+    }
+
+    body {
+     font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+     color: #333333;
+     font-size: 12px;
+     line-height: 18px;
+    }
+
+    #bg {
+     background-color: #099;
+     border: 2px solid #fff;
+     border-radius: 5px;
+     box-shadow: 0 0 0 1px #777, 1px 1px 4px 2px #aaa;
+     color: #fff;
+     font-size: 30px;
+     font-weight: bold;
+     height: 57px;
+     left: 0;
+     line-height: 57px;
+     margin: auto;
+     position: absolute;
+     right: 0;
+     text-align: center;
+     text-decoration: none;
+     text-shadow: 1px 1px 0 #111;
+     top: 5%;
+     width: 269px;
+    }
+  </style>
+</head>
+<body>
+  <a id="bg" onclick="return false" href="javascript:(function () {
+  if (document.getElementById('BackgroundGeneratorBookmarklet')) {
+   var elem = document.getElementById('BackgroundGeneratorBookmarklet');
+   if (elem.style.display === 'block') {
+    elem.style.display = 'none';
+   } else {
+    elem.style.display = 'block';
+   }
+  } else {
+   var div = document.createElement('div');
+   div.id = 'BackgroundGeneratorBookmarklet';
+   div.style.display = 'block';
+   document.body.appendChild(div);
+   var css = document.createElement('link');
+   css.href = 'http://localhost/BackgroundGenerator/bm.css';
+   css.rel = 'stylesheet';
+   document.getElementsByTagName('head')[0].appendChild(css);
+   var script = document.createElement('script');
+   script.src = 'http://localhost/BackgroundGenerator/bm.js';
+   document.body.appendChild(script);
+  }
+  }());">back generator</a>
+</body>
+</html>
