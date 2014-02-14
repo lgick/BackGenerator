@@ -16,7 +16,7 @@
   right:0;
   margin: auto;
   width: 178px;
-  height: 112px;
+  height: 100px;
   background-color: #e2e2e2;
   background: linear-gradient(to bottom, #e6e6e6 0%, #efefef 50%, #e2e2e2 100%);
   border-radius: 0 0 3px 3px;
@@ -25,23 +25,18 @@
   transition: top 1s;
 }
 
-#BG_downloadButton, #BG_backButton, #BG_forwardButton, #BG_homeButton {
+#BG_download, #BG_backButton, #BG_forwardButton, #BG_homeButton {
   position: absolute;
   cursor: pointer;
 }
 
-#BG_downloadButton {
-  height: 32px;
-  width: 32px;
-  right: 0;
-  bottom: 5px;
-  left: 0;
-  margin: auto;
-  background: url('/bg/images/img/download.png') no-repeat center;
-}
-
-#BG_downloadButton:active {
-  background: url('/bg/images/img/download-active.png') no-repeat center;
+#BG_download {
+  bottom: 6px;
+  left: 7px;
+  font-size: 10px;
+  width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 #BG_backButton {
@@ -78,7 +73,7 @@
 }
 
 #BG_homeButton:hover {
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 #BG_selectValue {
@@ -102,12 +97,13 @@
 
 #BG_statFace {
   position: absolute;
-  top: 55px;
+  top: 56px;
   left: 0;
   right: 0;
   margin: auto;
   width: 117px;
   font-size: 10px;
+  line-height: 18px;
   height: 18px;
   text-align: center;
 }

@@ -48,6 +48,9 @@
         elem.style.top = '0px';
       }
     } else {
+      var div = document.createElement('div');
+      div.id = 'BackgroundGeneratorBookmarklet';
+      document.body.appendChild(div);
       var css = document.createElement('link');
       css.href = 'http://localhost/bg/style.css';
       css.rel = 'stylesheet';
@@ -55,10 +58,6 @@
       var script = document.createElement('script');
       script.src = 'http://localhost/bg/script.js';
       document.body.appendChild(script);
-      var div = document.createElement('div');
-      div.id = 'BackgroundGeneratorBookmarklet';
-      document.body.appendChild(div);
-      div.style.top = '0px';
     }
   }());">back generator</a>
 </body>

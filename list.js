@@ -1,4 +1,4 @@
-backGenerateData({
+BG.parseData({
   light: [
     '45degreee_fabric.png',
     '60degree_gray.png',
