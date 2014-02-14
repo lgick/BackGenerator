@@ -183,4 +183,4 @@ BG.prototype.getStatFace = function () {
 
   document.body.appendChild(script);
 
-}(this, 'http://localhost/bg/', 'BackgroundGeneratorBookmarklet'));
+}(this, 'https://rawgithub.com/lgick/BackGenerator/master/', 'BackgroundGeneratorBookmarklet'));
