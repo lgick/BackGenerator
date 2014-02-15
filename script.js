@@ -11,27 +11,22 @@ function BG(data) {
   this.select = data.select;
   this.input = data.input;
   this.statFace = data.statFace;
+  this.loading = data.loading;
 
   this.select.onchange = function (e) {
     that.type = e.target.value;
     that.number = 0;
-    that.getStatFace();
     that.generateBG();
   };
 
   this.back.onclick = function () {
     that.next('back');
-    that.getStatFace();
     that.generateBG();
   };
 
   this.forward.onclick = function () {
     that.next('forward');
-    that.getStatFace();
     that.generateBG();
-  };
-
-  this.download.onclick = function () {
   };
 
   this.getStatFace();
@@ -69,32 +64,43 @@ BG.prototype.next = function (move) {
 
 // генерация фона
 BG.prototype.generateBG = function () {
-  var value = this.input.value
-    , type = value.charAt(0)
-    , bg = 'url(' + this.uri + 'images/'
-        + this.type + '/' + BG.list[this.type][this.number] + ') repeat'
-    , elem
-    , i
-    , len;
+  this.loading.style.display = 'block';
 
-  if (type === '#') {
-    elem = this.document.getElementById(value.substring(1));
+  var bgImg = new Image()
+    , that = this
+  ;
 
-    if (!elem) {
-      return;
+  bgImg.src = this.uri + 'images/' + this.type + '/' + BG.list[this.type][this.number]
+
+  bgImg.onload = function () {
+    var value = that.input.value
+      , type = value.charAt(0)
+      , bg = 'url(' + bgImg.src + ') repeat'
+      , elem
+      , i
+      , len
+    ;
+
+    if (type === '#') {
+      elem = that.document.getElementById(value.substring(1));
+
+      if (elem) {
+        elem.style.background = bg;
+      }
+
+    } else if (type === '.') {
+      elems = that.document.getElementsByClassName(value.substring(1));
+
+      for (i = 0, len = elems.length; i < len; i += 1) {
+        elems[i].style.background = bg;
+      }
+    } else {
+      that.document.body.style.background = bg;
     }
 
-    elem.style.background = bg;
-  } else if (type === '.') {
-    elems = this.document.getElementsByClassName(value.substring(1));
-
-    for (i = 0, len = elems.length; i < len; i += 1) {
-      elems[i].style.background = bg;
-    }
-  } else {
-    this.document.body.style.background = bg;
-  }
-}
+    that.getStatFace();
+  };
+};
 
 // выводит номер фона и общее количество
 BG.prototype.getStatFace = function () {
@@ -103,6 +109,8 @@ BG.prototype.getStatFace = function () {
   this.statFace.innerHTML = this.number + 1 + ' of ' + arr.length;
   this.download.href = this.uri + 'images/' + this.type + '/' + arr[this.number];
   this.download.innerHTML = arr[this.number];
+
+  this.loading.style.display = 'none';
 };
 
 
@@ -123,6 +131,7 @@ BG.prototype.getStatFace = function () {
     , option2 = document.createElement('option')
     , option3 = document.createElement('option')
     , statFace = document.createElement('div')
+    , loading = document.createElement('div')
     , script = document.createElement('script')
   ;
 
@@ -133,6 +142,7 @@ BG.prototype.getStatFace = function () {
   select.id = 'BG_selectValue';
   input.id = 'BG_inputValue';
   statFace.id = 'BG_statFace';
+  loading.id = 'BG_loading';
 
   download.title = 'download';
   backButton.title = 'back';
@@ -160,6 +170,7 @@ BG.prototype.getStatFace = function () {
   frag.appendChild(select);
   frag.appendChild(input);
   frag.appendChild(statFace);
+  frag.appendChild(loading);
 
   bg.appendChild(frag);
 
@@ -177,7 +188,8 @@ BG.prototype.getStatFace = function () {
       forward: forwardButton,
       select: select,
       input: input,
-      statFace: statFace
+      statFace: statFace,
+      loading: loading
     });
   };
 
