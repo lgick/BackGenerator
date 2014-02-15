@@ -4,28 +4,52 @@
 
 
 ### Как использовать:
+
 1. Посетите [сайт](http://bg.lgick.ru)
 2. Перенесите ссылку в закладки
 3. Кликните на букмарклет на сайте, где нужно подобрать фон
 4. Понажимайте на стрелочки :)
 
-=======
+-------------
 
 #### Дополнительно:
-По умолчанию фон создается для тега `<body>`, но также имеется возможность сделать фон для отдельных элементов:
+По умолчанию фон создается для тега `<body>`, но также имеется возможность сделать фон для отдельных элементов. Для этого в поле ввода можно вписать id элемента `#<id>`, или класс элемента(ов) `.<имя класса>`
 
-1. Если элемент имеет id ввести: 
+Фон можно выбирать: 
+* light
+* dark
+* color
+ 
+В букмарклете генерируется ссылка фона, нажав на нее текущий фон откроется в новом окне.
 
+-------------------------
+
+### Как использовать локально:
+
+Скачать:
 ```
-#<id>
+git clone https://github.com/lgick/BackGenerator.git BackGenerator
 ```
+По умолчанию корневая папка букмарклета доступна по адресу http://localhost/bg/, поэтому нужно либо сконфигурировать сервер, либо изменить пути:
 
-2. Если элемент(ы) имеет(ют) класс ввести:
+https://github.com/lgick/BackGenerator/blob/master/index.html#L55
 
-```
-.<имя класса>
-```
+https://github.com/lgick/BackGenerator/blob/master/index.html#L59
 
-Фон можно выбирать: light, dark, color
+https://github.com/lgick/BackGenerator/blob/master/script.js#L198
 
-В букмарклете генерируется ссылка фона, нажав на нее откроется фон в новом окне.
+https://github.com/lgick/BackGenerator/blob/master/style.css#L44
+
+https://github.com/lgick/BackGenerator/blob/master/style.css#L52
+
+https://github.com/lgick/BackGenerator/blob/master/style.css#L60
+
+https://github.com/lgick/BackGenerator/blob/master/style.css#L64
+
+https://github.com/lgick/BackGenerator/blob/master/style.css#L68
+
+https://github.com/lgick/BackGenerator/blob/master/style.css#L114
+
+
+
+
