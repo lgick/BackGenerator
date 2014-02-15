@@ -141,7 +141,7 @@ BG.prototype.getStatFace = function () {
 
   download.target = '_blank';
   input.type = 'text';
-  input.placeholder = '#elem || .elem';
+  input.placeholder = '#id || .className';
   home.href = 'https://github.com/lgick/BackGenerator';
   statFace.innerHTML = '';
 
@@ -183,4 +183,4 @@ BG.prototype.getStatFace = function () {
 
   document.body.appendChild(script);
 
-}(this, 'https://rawgithub.com/lgick/BackGenerator/master/', 'BackgroundGeneratorBookmarklet'));
+}(this, 'http://localhost/bg/', 'BackgroundGeneratorBookmarklet'));

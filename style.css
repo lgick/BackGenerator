@@ -40,7 +40,7 @@
 }
 
 #BG_backButton {
-  background: url('/lgick/BackGenerator/master/images/img/back.png') no-repeat center;
+  background: url('/bg/images/img/back.png') no-repeat center;
   width: 32px;
   height: 32px;
   left: 7px;
@@ -48,7 +48,7 @@
 }
 
 #BG_forwardButton {
-  background: url('/lgick/BackGenerator/master/images/img/forward.png') no-repeat center;
+  background: url('/bg/images/img/forward.png') no-repeat center;
   width: 32px;
   height: 32px;
   right: 7px;
@@ -56,15 +56,15 @@
 }
 
 #BG_backButton:active {
-  background: url('/lgick/BackGenerator/master/images/img/back-active.png') no-repeat center;
+  background: url('/bg/images/img/back-active.png') no-repeat center;
 }
 
 #BG_forwardButton:active {
-  background: url('/lgick/BackGenerator/master/images/img/forward-active.png') no-repeat center;
+  background: url('/bg/images/img/forward-active.png') no-repeat center;
 }
 
 #BG_homeButton {
-  background: url('/lgick/BackGenerator/master/images/img/octocat.png') no-repeat center;
+  background: url('/bg/images/img/octocat.png') no-repeat center;
   width: 16px;
   height: 16px;
   bottom: 4px;
