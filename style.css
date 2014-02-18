@@ -31,7 +31,7 @@
 }
 
 #BG_download {
-  bottom: 6px;
+  bottom: 3px;
   left: 7px;
   font-size: 10px;
   width: 140px;
@@ -98,7 +98,7 @@
 
 #BG_statFace {
   position: absolute;
-  top: 56px;
+  top: 60px;
   left: 0;
   right: 0;
   margin: auto;
@@ -113,7 +113,7 @@
   display: none;
   background: #eaeaea url('/bg/images/img/loading.gif') no-repeat center;
   position: absolute;
-  top: 56px;
+  top: 60px;
   left: 0;
   right: 0;
   margin: auto;
