@@ -2,7 +2,7 @@ function BG(data) {
   var that = this;
 
   this.document = data.document;
-  this.uri = data.uri;
+  this.url = data.url;
   this.number = data.number;
   this.type = data.type;
   this.download = data.download;
@@ -70,7 +70,7 @@ BG.prototype.generateBG = function () {
     , that = this
   ;
 
-  bgImg.src = this.uri + 'images/' + this.type + '/' + BG.list[this.type][this.number]
+  bgImg.src = this.url + 'images/' + this.type + '/' + BG.list[this.type][this.number]
 
   bgImg.onload = function () {
     var value = that.input.value
@@ -107,14 +107,14 @@ BG.prototype.getStatFace = function () {
   var arr = BG.list[this.type];
 
   this.statFace.innerHTML = this.number + 1 + ' of ' + arr.length;
-  this.download.href = this.uri + 'images/' + this.type + '/' + arr[this.number];
+  this.download.href = this.url + 'images/' + this.type + '/' + arr[this.number];
   this.download.innerHTML = arr[this.number];
 
   this.loading.style.display = 'none';
 };
 
 
-(function (window, uri, container) {
+(function (window, url, container) {
   'use strict';
 
   var document = window.document
@@ -174,13 +174,13 @@ BG.prototype.getStatFace = function () {
 
   bg.appendChild(frag);
 
-  script.src = uri + 'list.js';
+  script.src = url + 'list.js';
   script.onload = function () {
     bg.style.top = '0px';
 
     new BG({
       document: document,
-      uri: uri,
+      url: url,
       number: 0,
       type: 'light',
       download: download,
@@ -195,4 +195,4 @@ BG.prototype.getStatFace = function () {
 
   document.body.appendChild(script);
 
-}(this, 'http://localhost/bg/', 'BackgroundGeneratorBookmarklet'));
+}(this, 'https://cdn.rawgit.com/lgick/BackGenerator/v1.0/', 'BackgroundGeneratorBookmarklet'));

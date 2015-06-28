@@ -41,7 +41,7 @@
 }
 
 #BG_backButton {
-  background: url('/bg/images/img/back.png') no-repeat center;
+  background: url('images/img/back.png') no-repeat center;
   width: 32px;
   height: 32px;
   left: 7px;
@@ -49,7 +49,7 @@
 }
 
 #BG_forwardButton {
-  background: url('/bg/images/img/forward.png') no-repeat center;
+  background: url('images/img/forward.png') no-repeat center;
   width: 32px;
   height: 32px;
   right: 7px;
@@ -57,15 +57,15 @@
 }
 
 #BG_backButton:active {
-  background: url('/bg/images/img/back-active.png') no-repeat center;
+  background: url('images/img/back-active.png') no-repeat center;
 }
 
 #BG_forwardButton:active {
-  background: url('/bg/images/img/forward-active.png') no-repeat center;
+  background: url('images/img/forward-active.png') no-repeat center;
 }
 
 #BG_homeButton {
-  background: url('/bg/images/img/octocat.png') no-repeat center;
+  background: url('images/img/octocat.png') no-repeat center;
   width: 16px;
   height: 16px;
   bottom: 4px;
@@ -111,7 +111,7 @@
 
 #BG_loading {
   display: none;
-  background: #eaeaea url('/bg/images/img/loading.gif') no-repeat center;
+  background: #eaeaea url('images/img/loading.gif') no-repeat center;
   position: absolute;
   top: 60px;
   left: 0;
